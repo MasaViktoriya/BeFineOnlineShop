@@ -1,7 +1,8 @@
 package ru.masaviktoria.befine.domain;
 
-
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import ru.masaviktoria.befine.dto.OfflineDeliveryDTO;
 
 import java.util.*;
@@ -9,6 +10,7 @@ import java.time.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class PickUpPointDelivery {
 
     private Long id;
@@ -22,8 +24,6 @@ public class PickUpPointDelivery {
     private String timetable;
     private List<Product> productsForThisDeliveryList;
 
-    public PickUpPointDelivery() {
-    }
 
     public PickUpPointDelivery(OfflineDeliveryDTO offlineDeliveryDTO) {
         this.id = offlineDeliveryDTO.getDeliveryId();

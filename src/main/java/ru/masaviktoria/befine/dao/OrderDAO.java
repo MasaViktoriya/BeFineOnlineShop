@@ -2,8 +2,8 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.masaviktoria.befine.domain.DeliveryList;
 
 import java.util.*;
 import java.time.*;
@@ -12,6 +12,7 @@ import java.time.*;
 @Table(name = "orders")
 @Getter
 @Setter
+@NoArgsConstructor
 public class OrderDAO {
 
     @Id
@@ -47,8 +48,6 @@ public class OrderDAO {
     @JoinColumn(name = "customer_id")
     private CustomerDAO customerDAO;
 
-    public OrderDAO() {
-    }
 
     public OrderDAO(CustomerDAO customerDAO, LocalDateTime purchaseDateTime, Boolean isDelivered, Boolean isActive, Boolean isOnReturn, Boolean isCancelled, Boolean isReturned) {
         this.customerDAO = customerDAO;

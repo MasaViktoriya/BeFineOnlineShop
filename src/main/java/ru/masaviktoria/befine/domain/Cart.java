@@ -1,6 +1,7 @@
 package ru.masaviktoria.befine.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class Cart {
 
     private Long id;
@@ -21,10 +23,6 @@ public class Cart {
 
     private DeliveryList deliveryList;
 
-
-    public Cart() {
-
-    }
 
     public Cart(List<Product> productList, LocalDateTime creationDateTime, Customer customer, DeliveryList deliveryList) {
         this.productList = productList;

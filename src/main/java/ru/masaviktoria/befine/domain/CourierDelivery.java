@@ -2,6 +2,7 @@ package ru.masaviktoria.befine.domain;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.masaviktoria.befine.dto.OfflineDeliveryDTO;
 
@@ -10,6 +11,7 @@ import java.time.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class CourierDelivery {
 
     private Long id;
@@ -24,8 +26,6 @@ public class CourierDelivery {
     private String timetable;
     private List<Product> productsForThisDeliveryList;
 
-    public CourierDelivery() {
-    }
 
     public CourierDelivery(OfflineDeliveryDTO offlineDeliveryDTO) {
         this.id = offlineDeliveryDTO.getDeliveryId();

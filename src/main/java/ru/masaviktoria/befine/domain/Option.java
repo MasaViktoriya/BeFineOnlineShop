@@ -1,11 +1,13 @@
 package ru.masaviktoria.befine.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class Option {
 
     private Long id;
@@ -15,6 +17,4 @@ public class Option {
     private Consultation consultation;
     private Consultant consultant;
 
-    public Option() {
-    }
 }

@@ -1,6 +1,7 @@
 package ru.masaviktoria.befine.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.masaviktoria.befine.domain.Category;
 import ru.masaviktoria.befine.domain.Option;
@@ -12,6 +13,7 @@ import java.util.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class ProductDTO {
 
     private Long productId;
@@ -30,8 +32,6 @@ public class ProductDTO {
     private Boolean isPrescriptionRequired;
     private Class<? extends Product> productTypeWithParameters;
 
-    public ProductDTO() {
-    }
 
     public ProductDTO(Product product) {
         this.productId = product.getProductId();

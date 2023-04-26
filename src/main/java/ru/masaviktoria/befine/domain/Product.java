@@ -1,6 +1,7 @@
 package ru.masaviktoria.befine.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.masaviktoria.befine.dto.ProductDTO;
 
@@ -10,6 +11,7 @@ import java.util.Set;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class Product {
 
     private Long productId;
@@ -18,10 +20,6 @@ public class Product {
     private Set<Category> categories = new HashSet<>();
     private String description;
     private Class<? extends Product>  productTypeWithParameters;
-
-
-    public Product() {
-    }
 
 
     public Product(String title, Integer price, Set<Category> categories, String description, Class<? extends Product> productTypeWithParameters) {

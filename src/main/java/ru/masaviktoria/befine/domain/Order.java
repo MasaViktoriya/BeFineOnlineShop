@@ -1,6 +1,7 @@
 package ru.masaviktoria.befine.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class Order {
 
     private Long id;
@@ -21,8 +23,6 @@ public class Order {
     private List<Product> productList;
     private Customer customer;
 
-    public Order() {
-    }
 
     public Order(Customer customer, LocalDateTime purchaseDateTime, Boolean isDelivered, Boolean isActive, Boolean isOnReturn, Boolean isCancelled, Boolean isReturned) {
         this.customer = customer;

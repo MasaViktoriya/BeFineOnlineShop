@@ -2,6 +2,7 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.*;
@@ -11,6 +12,7 @@ import java.util.*;
 @Table(name = "customers")
 @Getter
 @Setter
+@NoArgsConstructor
 public class CustomerDAO {
 
     @Id
@@ -43,10 +45,6 @@ public class CustomerDAO {
 
     @OneToMany(mappedBy = "customer")
     private Set<ReviewDAO> rewiews;
-
-
-    public CustomerDAO() {
-    }
 
 
     public CustomerDAO(String login, String password, String address, String contacts, CartDAO cartDAO) {

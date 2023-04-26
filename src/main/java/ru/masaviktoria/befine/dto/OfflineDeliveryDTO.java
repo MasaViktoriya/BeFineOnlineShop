@@ -1,6 +1,7 @@
 package ru.masaviktoria.befine.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.masaviktoria.befine.domain.CourierDelivery;
 import ru.masaviktoria.befine.domain.PickUpPointDelivery;
@@ -12,6 +13,7 @@ import java.time.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class OfflineDeliveryDTO {
 
     private Long orderId;
@@ -31,8 +33,6 @@ public class OfflineDeliveryDTO {
 
     private String type;
 
-    public OfflineDeliveryDTO() {
-    }
 
     public OfflineDeliveryDTO(CourierDelivery courierDelivery) {
         this.deliveryId = courierDelivery.getId();

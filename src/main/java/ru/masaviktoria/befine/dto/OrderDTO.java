@@ -2,6 +2,7 @@ package ru.masaviktoria.befine.dto;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.masaviktoria.befine.domain.Delivery;
 
@@ -10,6 +11,7 @@ import java.time.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class OrderDTO {
     private List<ProductDTO> productList;
     private Long customerId;
@@ -22,6 +24,4 @@ public class OrderDTO {
     private Boolean isActive;
     private Long id;
 
-    public OrderDTO() {
-    }
 }

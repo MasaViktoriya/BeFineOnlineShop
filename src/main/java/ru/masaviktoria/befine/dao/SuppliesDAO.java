@@ -3,6 +3,7 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
@@ -12,6 +13,7 @@ import java.math.BigDecimal;
 @PrimaryKeyJoinColumn(name = "product_id")
 @Getter
 @Setter
+@NoArgsConstructor
 public class SuppliesDAO extends ProductDAO {
 
     @Id
@@ -31,10 +33,5 @@ public class SuppliesDAO extends ProductDAO {
 
     @Column(name = "producer")
     private String producer;
-
-    public SuppliesDAO() {
-    }
-
-
 
 }

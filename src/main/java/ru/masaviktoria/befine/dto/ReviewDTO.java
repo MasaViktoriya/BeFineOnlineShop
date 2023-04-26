@@ -1,6 +1,7 @@
 package ru.masaviktoria.befine.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.masaviktoria.befine.domain.Review;
 
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class ReviewDTO {
 
     private String title;
@@ -17,8 +19,6 @@ public class ReviewDTO {
     private Integer rating;
     private LocalDateTime creationDateTime;
 
-    public ReviewDTO() {
-    }
 
     public ReviewDTO(Review review) {
         this.title = review.getTitle();

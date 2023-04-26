@@ -2,6 +2,7 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.masaviktoria.befine.dto.ReviewDTO;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @Table
 @Getter
 @Setter
+@NoArgsConstructor
 public class ReviewDAO {
 
     @Id
@@ -36,8 +38,6 @@ public class ReviewDAO {
     @Column(name = "rating")
     private Integer rating;
 
-    public ReviewDAO() {
-    }
 
     public ReviewDAO(ReviewDTO reviewDTO) {
         this.title = reviewDTO.getTitle();

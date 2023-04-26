@@ -3,12 +3,14 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "options")
 @Getter
 @Setter
+@NoArgsConstructor
 public class OptionDAO {
 
     @Id
@@ -33,6 +35,4 @@ public class OptionDAO {
     @JoinColumn(name = "consultant_id")
     private ConsultantDAO consultantDAO;
 
-    public OptionDAO() {
-    }
 }

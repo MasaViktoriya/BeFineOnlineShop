@@ -1,6 +1,7 @@
 package ru.masaviktoria.befine.domain;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
@@ -9,6 +10,7 @@ import java.util.Set;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class Customer {
 
     private Long id;
@@ -23,11 +25,6 @@ public class Customer {
     private Set<Order> orders;
 
     private Set<Review> rewiews;
-
-
-    public Customer() {
-    }
-
 
     public Customer(String login, String password, String address, String contacts, Cart cart) {
         this.login = login;

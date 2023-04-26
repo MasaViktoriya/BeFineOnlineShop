@@ -2,6 +2,7 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
@@ -11,6 +12,7 @@ import java.util.List;
 @Table(name = "carts")
 @Getter
 @Setter
+@NoArgsConstructor
 public class CartDAO {
 
     @Id
@@ -31,10 +33,6 @@ public class CartDAO {
     @Column(name = "delivery_list")
     private String deliveryListJSON;
 
-
-    public CartDAO() {
-
-    }
 
     public CartDAO(List<CartProductDAO> cartProductsDAO, LocalDateTime creationDateTime, CustomerDAO customerDAO, String deliveryList) {
         this.cartProductsDAO = cartProductsDAO;

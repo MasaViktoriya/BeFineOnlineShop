@@ -3,6 +3,7 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.HashSet;
@@ -12,6 +13,7 @@ import java.util.Set;
 @Table(name = "categories")
 @Getter
 @Setter
+@NoArgsConstructor
 public class CategoryDAO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +29,6 @@ public class CategoryDAO {
     @ManyToMany(mappedBy = "categories")
     private Set<ProductDAO> productsDAO = new HashSet<>();
 
-    public CategoryDAO() {
-    }
 
     public CategoryDAO(String name, Long parentCategoryId) {
         this.name = name;

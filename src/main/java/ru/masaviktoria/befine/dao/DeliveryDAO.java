@@ -3,6 +3,7 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
@@ -10,6 +11,7 @@ import lombok.Setter;
 @Table(name = "deliveries")
 @Getter
 @Setter
+@NoArgsConstructor
 public class DeliveryDAO<T> {
 
     @Id
@@ -22,9 +24,6 @@ public class DeliveryDAO<T> {
 
     @Column(name="delivery")
     private Class<T> delivery;
-
-    public DeliveryDAO() {
-    }
 
     public DeliveryDAO(Long orderId, Class<T> delivery) {
         this.orderId = orderId;

@@ -3,6 +3,7 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.*;
@@ -11,6 +12,7 @@ import java.util.*;
 @Table(name = "consultants")
 @Getter
 @Setter
+@NoArgsConstructor
 public class ConsultantDAO {
 
     @Id

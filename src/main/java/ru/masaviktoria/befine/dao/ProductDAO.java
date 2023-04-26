@@ -2,6 +2,7 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Where;
 
@@ -16,6 +17,7 @@ import java.util.Set;
 @Table(name = "products")
 @Getter
 @Setter
+@NoArgsConstructor
 public class ProductDAO {
 
     @Id
@@ -39,10 +41,6 @@ public class ProductDAO {
     @OneToMany(mappedBy = "productDAO")
     @Where(clause = "in_cart = true")
     private List<CartProductDAO> cartProductsDAO = new ArrayList<>();
-
-
-    public ProductDAO() {
-    }
 
 
     public ProductDAO(String title, Integer price, Set<CategoryDAO> categories, String description) {

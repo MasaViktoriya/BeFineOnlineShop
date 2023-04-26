@@ -2,6 +2,7 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
@@ -9,6 +10,7 @@ import lombok.Setter;
 @PrimaryKeyJoinColumn(name = "product_id")
 @Getter
 @Setter
+@NoArgsConstructor
 public class MedicationDAO extends ProductDAO {
 
     @Id
@@ -31,9 +33,5 @@ public class MedicationDAO extends ProductDAO {
 
     @Column(name = "is_prescription_required")
     private Boolean isPrescriptionRequired;
-
-    public MedicationDAO() {
-    }
-
 
 }

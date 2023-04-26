@@ -3,6 +3,7 @@ package ru.masaviktoria.befine.dao;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.*;
@@ -12,6 +13,7 @@ import java.util.*;
 @PrimaryKeyJoinColumn(name = "product_id")
 @Getter
 @Setter
+@NoArgsConstructor
 public class ConsultationDAO extends ProductDAO {
 
     @Id
@@ -32,9 +34,5 @@ public class ConsultationDAO extends ProductDAO {
 
     @OneToMany(mappedBy = "consultation", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<OptionDAO> optionsDAO = new HashSet<>();
-
-    public ConsultationDAO(){
-
-    }
 
 }
