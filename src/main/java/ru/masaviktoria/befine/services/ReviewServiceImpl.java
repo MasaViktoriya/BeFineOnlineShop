@@ -1,22 +1,18 @@
 package ru.masaviktoria.befine.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.masaviktoria.befine.dao.ReviewDAO;
 import ru.masaviktoria.befine.dao.ReviewRepository;
 
 @Service
+@RequiredArgsConstructor
 public class ReviewServiceImpl implements ReviewService {
 
-    private ReviewRepository reviewRepository;
-
-    @Autowired
-    public ReviewServiceImpl(ReviewRepository reviewRepository) {
-        this.reviewRepository = reviewRepository;
-    }
+    private final ReviewRepository reviewRepository;
 
     public ReviewDAO createReview(ReviewDAO reviewDAO) {
-
+        return null;
     }
 
     public void updateReview(ReviewDAO reviewDAO) {
@@ -28,6 +24,6 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     public ReviewDAO showReview(Long reviewId) {
-
+        return null;
     }
 }

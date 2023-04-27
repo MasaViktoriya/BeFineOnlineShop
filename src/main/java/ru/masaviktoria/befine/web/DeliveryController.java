@@ -1,17 +1,13 @@
 package ru.masaviktoria.befine.web;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import ru.masaviktoria.befine.services.DeliveryService;
 
 @Controller
+@RequiredArgsConstructor
 public class DeliveryController {
 
-    private DeliveryService deliveryService;
-
-
-    public DeliveryController(DeliveryService deliveryService) {
-        this.deliveryService = deliveryService;
-    }
-
+    private final DeliveryService deliveryService;
 
 }

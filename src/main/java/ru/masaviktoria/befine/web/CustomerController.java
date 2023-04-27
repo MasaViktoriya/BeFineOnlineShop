@@ -1,19 +1,13 @@
 package ru.masaviktoria.befine.web;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import ru.masaviktoria.befine.services.CustomerService;
 
 @Controller
+@RequiredArgsConstructor
 public class CustomerController {
 
-    private CustomerService customerService;
-
-
-    @Autowired
-    public CustomerController(CustomerService customerService) {
-        this.customerService = customerService;
-    }
-
+    private final CustomerService customerService;
 
 }

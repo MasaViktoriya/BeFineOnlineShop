@@ -1,18 +1,15 @@
 package ru.masaviktoria.befine.web;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import ru.masaviktoria.befine.services.CartService;
 
 @Controller
+@RequiredArgsConstructor
 public class CartController {
 
-    private CartService cartService;
-
-    @Autowired
-    public CartController(CartService cartService) {
-        this.cartService = cartService;
-    }
+    private final CartService cartService;
 
 
 }

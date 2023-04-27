@@ -1,19 +1,15 @@
 package ru.masaviktoria.befine.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.masaviktoria.befine.dao.MedicationDAO;
 import ru.masaviktoria.befine.dao.MedicationRepository;
 
 @Service
+@RequiredArgsConstructor
 public class MedicationServiceImpl implements MedicationService {
 
-    private MedicationRepository medicationRepository;
-
-    @Autowired
-    public MedicationServiceImpl(MedicationRepository medicationRepository) {
-        this.medicationRepository = medicationRepository;
-    }
+    private final MedicationRepository medicationRepository;
 
     public MedicationDAO createMedication(MedicationDAO medicationDAO) {
         return null;

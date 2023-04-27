@@ -1,6 +1,6 @@
 package ru.masaviktoria.befine.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.masaviktoria.befine.dao.ConsultantDAO;
 import ru.masaviktoria.befine.dao.ConsultationDAO;
@@ -10,14 +10,10 @@ import ru.masaviktoria.befine.dao.ConsultationRepository;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class ConsultationServiceImpl implements ConsultationService {
 
-    private ConsultationRepository consultationRepository;
-
-    @Autowired
-    public ConsultationServiceImpl(ConsultationRepository consultationRepository) {
-        this.consultationRepository = consultationRepository;
-    }
+    private final ConsultationRepository consultationRepository;
 
     public ConsultationDAO showConsultation(Long consultationId){
         return null;

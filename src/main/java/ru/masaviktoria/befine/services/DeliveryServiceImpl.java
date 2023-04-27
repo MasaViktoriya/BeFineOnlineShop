@@ -1,6 +1,6 @@
 package ru.masaviktoria.befine.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.masaviktoria.befine.dao.*;
 import ru.masaviktoria.befine.dao.DeliveryRepository;
@@ -14,14 +14,9 @@ import java.time.LocalTime;
 
 
 @Service
+@RequiredArgsConstructor
 public class DeliveryServiceImpl<T> implements DeliveryService{
-    private DeliveryRepository<T> deliveryRepository;
-
-    @Autowired
-    public DeliveryServiceImpl(DeliveryRepository<T> deliveryRepository) {
-        this.deliveryRepository = deliveryRepository;
-    }
-
+    private final DeliveryRepository<T> deliveryRepository;
 
     public <T> DeliveryDAO<T> createDelivery(DeliveryDAO<T> deliveryDAO) {
         deliveryRepository.createDelivery(deliveryDAO);

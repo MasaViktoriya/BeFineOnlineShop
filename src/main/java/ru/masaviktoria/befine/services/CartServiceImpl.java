@@ -1,18 +1,16 @@
 package ru.masaviktoria.befine.services;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.masaviktoria.befine.dao.CartDAO;
 import ru.masaviktoria.befine.dto.ProductDTO;
 import ru.masaviktoria.befine.dao.CartRepository;
 
 @Service
+@RequiredArgsConstructor
 public class CartServiceImpl implements CartService {
 
-    private CartRepository cartRepository;
-
-    public CartServiceImpl(CartRepository cartRepository) {
-        this.cartRepository = cartRepository;
-    }
+    private final CartRepository cartRepository;
 
     public void addToCart(ProductDTO productDTO) {
 

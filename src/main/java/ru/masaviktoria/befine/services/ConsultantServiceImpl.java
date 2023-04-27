@@ -1,5 +1,6 @@
 package ru.masaviktoria.befine.services;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.masaviktoria.befine.dao.ConsultantDAO;
 import ru.masaviktoria.befine.dao.ConsultationDAO;
@@ -9,13 +10,10 @@ import ru.masaviktoria.befine.dao.ConsultantRepository;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class ConsultantServiceImpl implements ConsultantService {
 
-    private ConsultantRepository consultantRepository;
-
-    public ConsultantServiceImpl(ConsultantRepository consultantRepository) {
-        this.consultantRepository = consultantRepository;
-    }
+    private final ConsultantRepository consultantRepository;
 
     public ConsultantDAO createConsultant(ConsultantDAO consultantDAO) {
         return null;

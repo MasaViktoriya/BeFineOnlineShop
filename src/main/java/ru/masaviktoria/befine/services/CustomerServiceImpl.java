@@ -1,6 +1,6 @@
 package ru.masaviktoria.befine.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.masaviktoria.befine.dao.CartDAO;
 import ru.masaviktoria.befine.dao.CustomerDAO;
@@ -11,15 +11,10 @@ import ru.masaviktoria.befine.dao.CustomerRepository;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
 
-    private CustomerRepository customerRepository;
-
-    @Autowired
-    public CustomerServiceImpl(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
-    }
-
+    private final CustomerRepository customerRepository;
 
     public CustomerDAO registerNewCustomer(CustomerDAO customerDAO) {
         return null;
